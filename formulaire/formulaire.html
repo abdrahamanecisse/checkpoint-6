@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de Boutique</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Formulaire de Commande</h1>
+      <form action="/submit-order" method="POST">
+        <label for="name">Nom complet :</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="address">Adresse :</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <label for="product">Produit :</label>
+        <select id="product" name="product" required>
+          <option value="">-- Sélectionnez un produit --</option>
+          <option value="dior">Dior Sauvage</option>
+          <option value="Chanel Bleu de Chanel">Chanel Bleu de Chanel</option>
+          <option value="Armani">Armani Code</option>
+          <option value="Yves Saint Laurent La Nuit de L’Homme">
+            Yves Saint Laurent La Nuit de L’Homme
+          </option>
+        </select>
+
+        <label for="quantity">Quantité :</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          max="10"
+          required
+        />
+
+        <button type="submit">Passer commande</button>
+      </form>
+    </div>
+  </body>
+</html>
